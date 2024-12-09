@@ -171,23 +171,16 @@ export class RealtimeClient extends RealtimeEventHandler {
     });
     defaultSessionConfig: {
         modalities: string[];
-        // instructions: string;
+        instructions: string;
         voice: string;
         input_audio_format: string;
         output_audio_format: string;
         input_audio_transcription: any;
         turn_detection: any;
-        // tools: any[];
+        tools: any[];
         tool_choice: string;
         temperature: number;
         max_response_output_tokens: number;
-    };
-     if (!maintainSession) {
-      this.defaultSessionConfig = {
-        ...this.defaultSessionConfig,
-        instructions: '',
-        tools: [],
-      }
     };
     sessionConfig: {};
     transcriptionModels: {
